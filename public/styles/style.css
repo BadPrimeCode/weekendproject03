@@ -3,6 +3,10 @@
   src: url("http://schulzmarcel.de/x/fonts/digital-7_mono.ttf");
 }
 
+h1{
+  font-family: helvetica, sans-serif;
+}
+
 .container {
   width: 400px;
   position: relative;;

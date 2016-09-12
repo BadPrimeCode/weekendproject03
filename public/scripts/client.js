@@ -10,23 +10,24 @@ $(document).ready(function() {
     console.log('document ready');
 
   // // on click for numbers
-  //   $('.number').on('click', function() {
-  //     var x = $('.number').on('click', function(){
-  //       var what = $(this).data('id');
-  //       y = y + what;
-  //       console.log(y);
-  //       $('.display').html(y);
-  //   }); //end numbers
-  //
-  // // on click for operator
-  //   $('.operator').on('click', function() {
-  //     type = $(this).data('id');
-  //     console.log(type);
-  //     x = y;
-  //     console.log(x);
-  //     y = '';
-  //     console.log(y);
-  //   }); // end operator button
+    $('.number').on('click', function() {
+      var x = $('.number').on('click', function(){
+        console.log('x');
+        var what = $(this).data('id');
+        y = x + what;
+        console.log(y);
+        $('.display').html(y);
+    }); //end numbers
+
+  // on click for operator
+    $('.operator').on('click', function() {
+      type = $(this).data('id');
+      console.log(type);
+      x = y;
+      console.log(x);
+      y = '';
+      console.log(y);
+    }); // end operator button
 
   // on click for equals
     $('.equals').on('click', function() {
