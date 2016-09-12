@@ -6,20 +6,21 @@
 .container {
   width: 400px;
   position: relative;;
-  align-content: center;
+  -ms-flex-line-pack: center;;
+      align-content: center;
 }
 
 .calculator {
-box-shadow: 0px 5px 8px 1px #000;
-background-color:#292929;
-width:365px;
-height: 440px;
-border:2px solid black;
-border-radius: 9px;
-margin-top: 80px;
+  box-shadow: 0px 5px 8px 1px #000;
+  background-color:#292929;
+  width:365px;
+  height: 440px;
+  border:2px solid black;
+  border-radius: 9px;
+  margin-top: 80px;
 }
 
-div.calculator div.numInput{
+div.calculator div.display{
 	position:relative;
 	display:block;
 	width:320px;
@@ -41,13 +42,13 @@ div.calculator div.numInput{
 				inset -1px -1px 1px rgba(0,0,0,0.1),
 				inset 0px 2px 1px 2px rgba(0,0,0,0.1);
 }
-div.calculator div.numInput:before{
+/*div.calculator div.display:before{
 	content:"8888888.88";
 	position:relative;
-	/*left:10px;*/
+	left:10px;
 	color:rgba(0,0,0,0.18);
-}
-div.calculator div.numInput:after{
+}*/
+/*div.calculator div.display:after{
   content: "";
   position:absolute;
 	width:306px;
@@ -56,7 +57,7 @@ div.calculator div.numInput:after{
 	left:9px;
 	background:-webkit-linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1));
 	border-radius:5px;
-}
+}*/
 
 .buttongrid {
   margin-top: 42px;
@@ -64,13 +65,10 @@ div.calculator div.numInput:after{
 }
 
 button{
- border:1px solid #b7b7b7; -webkit-border-radius: 4px; -moz-border-radius: 4px;border-radius: 4px;font-size:30px;font-family:helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;font-weight:bold; color: #000000;
+ border:1px solid #b7b7b7;border-radius: 4px;font-size:30px;font-family:helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;font-weight:bold; color: #000000;
  margin: 6px;
  background-color: #d3d3d3; background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#707070));
  background-image: -webkit-linear-gradient(top, #d3d3d3, #707070);
- background-image: -moz-linear-gradient(top, #d3d3d3, #707070);
- background-image: -ms-linear-gradient(top, #d3d3d3, #707070);
- background-image: -o-linear-gradient(top, #d3d3d3, #707070);
  background-image: linear-gradient(to bottom, #d3d3d3, #707070);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#707070);
 }
 
@@ -78,13 +76,19 @@ button:hover{
  border:1px solid #a0a0a0;
  background-color: #bababa; background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#575757));
  background-image: -webkit-linear-gradient(top, #bababa, #575757);
- background-image: -moz-linear-gradient(top, #bababa, #575757);
- background-image: -ms-linear-gradient(top, #bababa, #575757);
- background-image: -o-linear-gradient(top, #bababa, #575757);
  background-image: linear-gradient(to bottom, #bababa, #575757);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#575757);
 }
 
-button.calc{
+button.number, button.operator, button.equals{
   height: 67px;
   width: 67px;
+}
+
+button.clear{
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 6px 10px;
 }
