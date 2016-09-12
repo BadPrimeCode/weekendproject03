@@ -1,9 +1,15 @@
 console.log('client.js sourced');
 
 // global vars
-var x = Number(mathProblem.x);
-var y = Number(mathProblem.y);
-var type = mathProblem.type;
+var x = "";
+var y = "";
+var type = "";
+// create object to send
+var mathProblem = {
+  x: x,
+  y: y,
+  type: type
+};
 
 
 $(document).ready(function() {
@@ -32,12 +38,6 @@ $(document).ready(function() {
   // on click for equals
     $('.equals').on('click', function() {
       console.log('equals button clicked');
-      // create object to send
-      var mathProblem = {
-        x: x,
-        y: y,
-        type: type
-      };
 
       // ajax post
       $.ajax({
